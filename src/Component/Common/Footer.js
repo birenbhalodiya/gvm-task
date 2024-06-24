@@ -4,13 +4,13 @@ import { Badge } from 'lucide-react'
 
 const Footer = () => {
     return (
-        <div className='py-10 container m-auto'>
+        <div className='md:py-10 sm:py-9 py-8 container m-auto'>
             <div>
-                <div className='flex justify-between'>
+                <div className='grid md:grid-cols-6 sm:grid-cols-3 grid-cols-2 justify-between sm:gap-7 gap-6'>
                     {[1, 1, 1, 1, 1, 1].map((item, i) => {
                         return (
-                            <div key={i}>
-                                <div className='text-[#475569] mb-5 font-medium flex items-center gap-2 justify-center'>
+                            <div key={i} className=''>
+                                <div className='text-[#475569] sm:mb-5 mb-3 font-medium flex items-center gap-2'>
                                     <Badge className='w-5 h-5' />
                                     <div>Categories</div>
                                 </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
                 <hr className='border border-bg my-10' />
                 <div>
-                    <div className='flex justify-between pb-7'>
+                    <div className='flex sm:flex-nowrap flex-wrap justify-between sm:pb-7 pb-4 gap-3'>
                         <div>@ 2023 Xinder, Inc. All rights reserved.</div>
                         <div>
                             <img src={SocialIcon} alt='' />

@@ -5,7 +5,7 @@ import { masterPieces } from '../../Helper/Constants'
 const MasterPieces = () => {
     return (
         <div className='bg-bg overflow-hidden'>
-            <div className='container m-auto py-20'>
+            <div className='container m-auto lg:py-20 md:py-16 sm:py-12 py-8'>
                 <Heading head='Latest masterpieces' pageLink='Discover More Masterpieces' />
                 <div className='pt-5 flex justify-between gap-3'>
                     {[1, 1, 1, 1, 1].map((ele, i) => {

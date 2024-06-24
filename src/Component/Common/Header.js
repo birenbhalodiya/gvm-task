@@ -29,7 +29,7 @@ export default function Header() {
         };
     }, [click]);
     return (
-        <div className={`top-0 z-50 w-full text-white  ${scrolled ? 'shadow-lg bg-transparent' : 'fixed bg-transparent'}`}>
+        <div className={`top-0 z-50 w-full text-white   ${scrolled ? 'shadow-lg bg-transparent fixed backdrop-blur-3xl backdrop-brightness-75' : 'fixed bg-transparent'}`}>
             <div className='z-20 flex items-center justify-between gap-5 py-5 container m-auto'>
                 <div className='cursor-pointer'>
                     <div>
@@ -41,14 +41,16 @@ export default function Header() {
                     <div onClick={() => setClick(false)}><div className='relative flex justify-between hover:text-bg cursor-pointer font-semibold'>Solutions</div></div>
                     <div onClick={() => setClick(false)}><div className='relative flex justify-between hover:text-bg cursor-pointer font-semibold'>Articles</div></div>
                     <div onClick={() => setClick(false)}><div className='relative flex justify-between hover:text-bg cursor-pointer font-semibold'>Sign In</div></div>
-                    <Button buttonName={'Join Now'} className='border-2 border-white text-white rounded-[5px]' />
+                    <div className="lg:mt-0 mt-2">
+                        <Button buttonName={'Join Now'} className='border-2 border-white text-white rounded-[5px]' />
+                    </div>
                 </div>
                 <div className="mobile_header_menu lg:hidden block cursor-pointer" onClick={handleClick}>
-                    {/* {click ? (
-                        <X />
+                    {click ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12L7 7m5 5l5 5m-5-5l5-5m-5 5l-5 5" /></svg>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" fill="white" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 17h8M5 12h14m-8-5h8" /></svg>
-                    )} */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#ffffff" d="M16 18v2H5v-2zm5-7v2H3v-2zm-2-7v2H8V4z" /></svg>
+                    )}
                 </div>
             </div>
         </div>
